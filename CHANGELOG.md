@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.1a3](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a3) (2026-08-15)
+
+[Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/0.0.1a2...0.0.1a3)
+
+**Merged pull requests:**
+
+- docs: add AGENTS.md with per-repo agent conventions [\#5](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/pull/5) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.1a2](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a2) (2026-08-15)
 
 [Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/0.0.1a1...0.0.1a2)
