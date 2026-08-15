@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.1a2](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a2) (2026-08-15)
+
+[Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/0.0.1a1...0.0.1a2)
+
+**Merged pull requests:**
+
+- fix: bound HiveMind handshake retries in Twilio bridge connect\(\) [\#3](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/pull/3) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.1a1](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a1) (2026-08-15)
 
 [Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/4effaf4decd2717f089c3ec49bf7448fefeafcbf...0.0.1a1)
