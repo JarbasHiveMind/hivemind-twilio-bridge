@@ -50,11 +50,37 @@ def test_connect_hivemind_calls_connect_once_and_registers_handlers():
     bridge, fake_client, fake_twilio = _make_bridge()
     bridge.connect_hivemind()
 
-    fake_client.connect.assert_called_once_with(site_id="twilio")
+    from hivemind_twilio_bridge import DEFAULT_HANDSHAKE_MAX_RETRIES
+
+    fake_client.connect.assert_called_once_with(
+        site_id="twilio", handshake_max_retries=DEFAULT_HANDSHAKE_MAX_RETRIES
+    )
     fake_client.run_forever.assert_not_called()
     assert bridge._connected is True
     registered = {call.args[0] for call in fake_client.on_mycroft.call_args_list}
     assert registered == {"speak", "hive.complete_intent_failure"}
+
+
+def test_connect_hivemind_bounds_handshake_retries():
+    """connect() must never be called with unbounded (None) handshake retries.
+
+    hivemind-bus-client's connect() blocks synchronously on the
+    handshake; handshake_max_retries=None is its own default and retries
+    forever, hanging the bridge against a stalled/unreachable hub.
+    """
+    bridge, fake_client, fake_twilio = _make_bridge()
+    bridge.connect_hivemind()
+
+    _, kwargs = fake_client.connect.call_args
+    assert kwargs["handshake_max_retries"] is not None
+    assert kwargs["handshake_max_retries"] > 0
+
+
+def test_handshake_max_retries_is_configurable():
+    bridge, fake_client, fake_twilio = _make_bridge(handshake_max_retries=3)
+    bridge.connect_hivemind()
+
+    fake_client.connect.assert_called_once_with(site_id="twilio", handshake_max_retries=3)
 
 
 def test_inbound_sms_forwarded_to_hivemind_after_connect():
