@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.1a4](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a4) (2026-08-15)
+
+[Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/0.0.1a3...0.0.1a4)
+
+**Merged pull requests:**
+
+- Configure Renovate [\#1](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/pull/1) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.0.1a3](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/tree/0.0.1a3) (2026-08-15)
 
 [Full Changelog](https://github.com/JarbasHiveMind/hivemind-twilio-bridge/compare/0.0.1a2...0.0.1a3)
